@@ -18,12 +18,14 @@ public class Disciplina {
     private Professor professor;
     private List<Turma> turmas = new ArrayList<>();
 
+    // Constructor
     public Disciplina(String nome, int cargaHoraria, Professor professor) {
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;
     }
 
+    // Getters e Setters
     public String getNome() {
         return nome;
     }
@@ -55,5 +57,4 @@ public class Disciplina {
     public void setTurmas(List<Turma> turmas) {
         this.turmas = turmas;
     }
-
 }

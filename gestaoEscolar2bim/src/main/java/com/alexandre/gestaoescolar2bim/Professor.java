@@ -4,7 +4,9 @@
  */
 package com.alexandre.gestaoescolar2bim;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -13,13 +15,15 @@ import java.util.Date;
 public class Professor extends Pessoa {
 
     private String registro;
+    private List<Disciplina> disciplinas = new ArrayList<>();
 
-    public Professor(String nome, Date dataNascimento, 
-            String endereco, String registro) {
+    // Constructor
+    public Professor(String nome, String dataNascimento, String endereco, String registro) {
         super(nome, dataNascimento, endereco);
         this.registro = registro;
     }
 
+    // Getters e Setters
     public String getRegistro() {
         return registro;
     }
@@ -28,4 +32,11 @@ public class Professor extends Pessoa {
         this.registro = registro;
     }
 
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
 }

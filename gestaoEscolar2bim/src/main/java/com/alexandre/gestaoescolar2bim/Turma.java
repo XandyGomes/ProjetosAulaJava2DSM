@@ -12,19 +12,22 @@ import java.util.List;
  * @author Alexandre
  */
 public class Turma {
+
     private String codigo;
     private int ano;
     private List<Aluno> alunos = new ArrayList<>();
     private Professor professor;
     private Disciplina disciplina;
 
+    // Constructor
     public Turma(String codigo, int ano, Professor professor, Disciplina disciplina) {
         this.codigo = codigo;
         this.ano = ano;
         this.professor = professor;
         this.disciplina = disciplina;
     }
-    
+
+    // Getters e Setters
     public String getCodigo() {
         return codigo;
     }
@@ -64,9 +67,4 @@ public class Turma {
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
     }
-    
-    
-    
-    
-    
 }

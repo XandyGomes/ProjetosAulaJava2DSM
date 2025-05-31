@@ -13,5 +13,4 @@ public interface Matriculavel {
     void matricular(Aluno aluno, Turma turma);
 
     void cancelarMatricula(Aluno aluno, Turma turma);
-
 }

@@ -16,12 +16,14 @@ public class Matricula {
     private Turma turma;
     private Date dataMatricula;
 
+    // Constructor
     public Matricula(Aluno aluno, Turma turma) {
         this.aluno = aluno;
         this.turma = turma;
-        this.dataMatricula = new Date();
+        this.dataMatricula = new Date(); // Data atual como data da matrícula
     }
 
+    // Getters e Setters
     public Aluno getAluno() {
         return aluno;
     }
@@ -45,5 +47,4 @@ public class Matricula {
     public void setDataMatricula(Date dataMatricula) {
         this.dataMatricula = dataMatricula;
     }
-
 }

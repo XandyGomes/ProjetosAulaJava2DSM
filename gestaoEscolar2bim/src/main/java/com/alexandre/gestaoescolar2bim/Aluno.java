@@ -14,12 +14,13 @@ public class Aluno extends Pessoa {
 
     private String matricula;
 
-    public Aluno(String nome, Date dataNascimento,
-            String endereco, String matricula) {
+    // Constructor
+    public Aluno(String nome, String dataNascimento, String endereco, String matricula) {
         super(nome, dataNascimento, endereco);
         this.matricula = matricula;
     }
 
+    // Getters e Setters
     public String getMatricula() {
         return matricula;
     }
@@ -27,5 +28,4 @@ public class Aluno extends Pessoa {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-
 }

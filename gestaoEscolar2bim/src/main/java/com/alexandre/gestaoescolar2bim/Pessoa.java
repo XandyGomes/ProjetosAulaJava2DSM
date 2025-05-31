@@ -4,8 +4,6 @@
  */
 package com.alexandre.gestaoescolar2bim;
 
-import java.util.Date;
-
 /**
  *
  * @author Alexandre
@@ -13,14 +11,17 @@ import java.util.Date;
 public abstract class Pessoa {
 
     private String nome;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String endereco;
 
-    public Pessoa(String nome, Date dataNascimento, String endereco) {
+    // Constructor
+    public Pessoa(String nome, String dataNascimento, String endereco) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
     }
+
+    // Getters e Setters
 
     public String getNome() {
         return nome;
@@ -30,11 +31,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

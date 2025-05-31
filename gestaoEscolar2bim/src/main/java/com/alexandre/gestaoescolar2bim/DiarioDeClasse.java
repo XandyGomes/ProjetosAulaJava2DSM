@@ -11,30 +11,38 @@ import java.util.List;
  *
  * @author Alexandre
  */
-public class DiarioDeClasse implements Avaliacao{
-    
+public class DiarioDeClasse implements Avaliacao {
+
     private List<Nota> notas = new ArrayList<>();
     private List<Frequencia> frequencias = new ArrayList<>();
 
     @Override
     public void registrarNota(Aluno aluno, Disciplina disciplina, double nota) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        notas.add(new Nota(aluno, disciplina, nota));
     }
 
     @Override
     public void registrarFrequencia(Aluno aluno, Disciplina disciplina, boolean presente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        frequencias.add(new Frequencia(aluno, disciplina, presente));
     }
 
-    public List<Nota> getNotas() {
-        return notas;
+    public List<Double> getNotas(Aluno aluno, Disciplina disciplina) {
+        List<Double> notasAlunoDisciplina = new ArrayList<>();
+        for (Nota nota : notas) {
+            if (nota.getAluno().equals(aluno) && nota.getDisciplina().equals(disciplina)) {
+                notasAlunoDisciplina.add(nota.getValor());
+            }
+        }
+        return notasAlunoDisciplina;
     }
 
-    public List<Frequencia> getFrequencias() {
-        return frequencias;
+    public List<Boolean> getFrequencias(Aluno aluno, Disciplina disciplina) {
+        List<Boolean> frequenciasAlunoDisciplina = new ArrayList<>();
+        for (Frequencia frequencia : frequencias) {
+            if (frequencia.getAluno().equals(aluno) && frequencia.getDisciplina().equals(disciplina)) {
+                frequenciasAlunoDisciplina.add(frequencia.isPresente());
+            }
+        }
+        return frequenciasAlunoDisciplina;
     }
-
-    
-
-    
 }
