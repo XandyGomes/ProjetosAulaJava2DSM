@@ -21,7 +21,7 @@ public class Emprestimo {
     public Emprestimo(Leitor leitor, Livro livro, Funcionario funcionario) {
         this.leitor = leitor;
         this.livro = livro;
-        this.dataEmprestimo = dataEmprestimo; // Data atual no momento do empréstimo
+        this.dataEmprestimo = dataEmprestimo;
         this.funcionario = funcionario;
     }
 
@@ -68,12 +68,11 @@ public class Emprestimo {
 
     @Override
     public String toString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return "Emprestimo{"
                 + "Leitor=" + leitor.getNome()
                 + ", Livro=" + livro.getTitulo()
-                + ", Data de Empréstimo=" + dateFormat.format(dataEmprestimo)
-                + ", Data de Devolução=" + (dataDevolucao != null ? dateFormat.format(dataDevolucao) : "Em aberto")
+                + ", Data de Empréstimo=" + dataEmprestimo
+                + ", Data de Devolução=" + (dataDevolucao != null ? dataDevolucao : "Ainda não devolvido")
                 + ", Funcionário=" + funcionario.getNome()
                 + '}';
     }
